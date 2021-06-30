@@ -12,6 +12,7 @@ L'API de visualisation sera ouverte a tous avec une limitation sur le nombre de 
 
 La pertinence des donnees a afficher sera laisser a la discretion des developpeurs mais vous avez qques exemples de rendu dans les ressources.
 
+Bon chance !
 ## Ressources
 
 https://data.boston.gov/dataset/crime-incident-reports-august-2015-to-date-source-new-system
@@ -19,3 +20,5 @@ https://data.boston.gov/dataset/crime-incident-reports-august-2015-to-date-sourc
 https://ksohn.shinyapps.io/TheChi_Crime_Data/
 
 https://andrewpwheeler.com/2021/03/15/crime-analysis-dashboards-in-tableau/
+
+
