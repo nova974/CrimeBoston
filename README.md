@@ -1,4 +1,4 @@
-# Coding dojo Node.js de l'Elsass JUG, 9 juin 2015
+# Coding dojo Node.js
 
 ### Etape 0 : Installation de Node.js !
 
