@@ -1,9 +1,16 @@
 const express = require('express');
 const Joi = require('joi');
-const joi = require('joi')
+const rateLimit = require("express-rate-limit");
 const fetch = require('node-fetch');
 const app = express()
 const port = 3000
+
+const limiter = rateLimit({
+    windowMs: 1 * 60 * 1000, // 1 minutes
+    max: 2 // limit each IP to 2 requests per windowMs
+});
+
+app.use(limiter);
 
 const monthSchema = Joi.object({
     month: Joi.number().min(1).max(12).required()
