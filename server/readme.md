@@ -3,6 +3,7 @@
 # Requirements
 
 - npm install node-fetch --save
+- npm install joi --save
 
 ## TODO
 
