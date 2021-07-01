@@ -6,8 +6,8 @@ const app = express()
 const port = 3000
 
 const limiter = rateLimit({
-    windowMs: 1 * 60 * 1000, // 1 minutes
-    max: 2 // limit each IP to 2 requests per windowMs
+    windowMs: 15 * 60 * 1000, // 1 minutes
+    max: 100 // limit each IP to 2 requests per windowMs
 });
 
 app.use(limiter);
