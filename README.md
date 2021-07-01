@@ -79,4 +79,4 @@ Dans le projet créé en Etape 2, vous avez peut-être écrit tout le code direc
 
 ### Etape 9 : Les promesses !
 
-La gestion de l'ansynchrone en Node.js n'est pas habituelle pour un développeur qui fait peu de Javascript. Les promesses permettent de faciliter cette gestion. Essayer d'utiliser le module Q ou le module bluebird pour comprendre comment ça fonctionne.
+La gestion de l'ansynchrone en Node.js n'est pas habituelle pour un développeur qui fait peu de Javascript. Les promesses permettent de faciliter cette gestion.
