@@ -20,6 +20,19 @@ app.get('/crimes', async (req, res) => {
     return res.send(json.result.records)
 });
 
+app.get('/crimes/:month', async (req, res) => {
+    const response = await fetch("https://data.boston.gov/api/3/action/datastore_search?resource_id=be047094-85fe-4104-a480-4fa3d03f9623")
+    const json = await response.json()
+
+    const queryparam = req.params.month
+
+    const filtered = json.result.records.filter(json => json.MONTH == queryparam)
+    return res.send(filtered)
+
+});
+
+
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 });
