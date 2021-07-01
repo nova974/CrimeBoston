@@ -1,5 +1,9 @@
 # GNEU ?
 
+# Requirements
+
+- npm install node-fetch --save
+
 ## TODO
 
 [ ] init projet + serveur
