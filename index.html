@@ -15,6 +15,7 @@
                 <div class="view">
                     <input class="toggle" type="checkbox" v-model='todo.status'>
                     <label>{{ todo.name }}</label>
+                    <button class="destroy" v-on:click="remove(todo)"></button>
                 </div>
             </li>
         </ul>
