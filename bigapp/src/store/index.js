@@ -26,5 +26,14 @@ export default new Vuex.Store({
     beers(state) {
       return state.beers;
     },
+    beer(state) {
+      console.log(state.beers) 
+      return (id => {
+        console.log(id) 
+        return state.beers.find(beer => {
+        return beer.id === id
+      }
+    )}
+   )}
   },
 });
