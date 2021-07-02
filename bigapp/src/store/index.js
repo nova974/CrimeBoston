@@ -5,12 +5,16 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    beers: []
+    beers: [],
+    favoriteBeer : null
   },
   mutations: {
     addBeer(state, beer) {
       state.beers.push(beer)
     },
+    setFavoriteBeer(state, beer){
+      state.favoriteBeer = beer
+    }
   },
   actions: {
     async getBeers(store) {
@@ -32,6 +36,9 @@ export default new Vuex.Store({
           return beer.id === id
         })
       })
+    },
+    favoriteBeer(state){
+      return state.favoriteBeer
     }
   },
 });
