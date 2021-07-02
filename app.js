@@ -4,7 +4,8 @@ const app = new Vue({
         message: 'test',
         tasks: [],
         newTodo: '',
-        id: 1
+        id: 1,
+        visibility: "all"
     },
     methods: {
         addTodo() {
@@ -17,6 +18,21 @@ const app = new Vue({
                 return task.id === todo.id
             }) 
             this.tasks.splice(index, 1)
+        }
+    },
+    computed: {
+        filterTasks() {
+            if(this.visibility === "all"){
+                return this.tasks
+            }
+            
+            if(this.visibility === "active"){
+                return this.tasks.filter( task => !task.status)    
+            }
+
+            if(this.visibility === "completed"){
+                return this.tasks.filter( task => task.status)
+            }                 
         }
     }
 })
