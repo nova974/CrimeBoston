@@ -11,10 +11,11 @@
     <div id="app">
         <input class='new-todo' placeholder="What needs to be done ?" v-model='newTodo' @keydown.enter="addTodo">
         <ul class="todo-list">
-            <li class="todo" v-for="todo in filterTasks" :class='{completed: todo.status}'>
+            <li class="todo" v-for="todo in filterTasks" :class='{completed: todo.status, editing: state === 1}'>
+                <input id="editTask" class="edit" type="text" v-model='todo.name' @keydown.enter="editTodo(todo)">
                 <div class="view">
                     <input class="toggle" type="checkbox" v-model='todo.status'>
-                    <label>{{ todo.name }}</label>
+                    <label v-on:dblclick = "edit(todo)">{{ todo.name }}</label>
                     <button class="destroy" v-on:click="remove(todo)"></button>
                 </div>
             </li>

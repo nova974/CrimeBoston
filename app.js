@@ -5,7 +5,8 @@ const app = new Vue({
         tasks: [],
         newTodo: '',
         id: 1,
-        visibility: "all"
+        visibility: "all",
+        state: 0
     },
     methods: {
         addTodo() {
@@ -18,7 +19,17 @@ const app = new Vue({
                 return task.id === todo.id
             }) 
             this.tasks.splice(index, 1)
+        },
+        edit(todo){
+            document.getElementById('editTask').focus()
+            this.state = 1
+            this.tasks.name = todo.name
+        },
+        editTodo(todo){
+            this.state = 0
+            todo.status = 0
         }
+
     },
     computed: {
         filterTasks() {
