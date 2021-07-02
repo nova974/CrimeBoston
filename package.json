@@ -1,0 +1,22 @@
+{
+  "name": "todomvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nova974/CrimeBoston.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nova974/CrimeBoston/issues"
+  },
+  "homepage": "https://github.com/nova974/CrimeBoston#readme",
+  "dependencies": {
+    "todomvc-app-css": "^2.4.1"
+  }
+}
