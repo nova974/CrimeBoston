@@ -1,9 +1,12 @@
+
+
 const app = new Vue({
     el: "#app",
     data: {
         message: 'test',
         tasks: [],
         newTodo: '',
+        currentEditingTask: {},
         id: 1,
         visibility: "all",
         state: 0
@@ -21,15 +24,19 @@ const app = new Vue({
             this.tasks.splice(index, 1)
         },
         edit(todo){
-            document.getElementById('editTask').focus()
+            this.currentEditingTask = todo;
+            document.getElementById('editTask_'+todo.id).focus()
             this.state = 1
-            this.tasks.name = todo.name
+            // this.tasks.name = todo.name
         },
         editTodo(todo){
             this.state = 0
             todo.status = 0
+        },
+        isEditing(todo) {
+            return this.state === 1 && this.currentEditingTask.id === todo.id
         }
-
+        
     },
     computed: {
         filterTasks() {
