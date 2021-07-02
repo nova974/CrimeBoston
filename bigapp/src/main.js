@@ -9,4 +9,5 @@ new Vue({
   router,
   store,
   render: (h) => h(App),
+  created: () => store.dispatch('getBeers'),
 }).$mount("#app");

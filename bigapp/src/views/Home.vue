@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <ul>
+    <li v-for="beer in beersAllYeah" :key="beer.uid">
+      <p>brand: {{beer.brand}}</p>
+      <router-link to="/about"><p>name: {{beer.name}}</p></router-link>
+      <p>alcohol: {{beer.alcohol}}</p>
+    </li>
+  </ul>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+  import { mapGetters } from 'vuex'
 
-export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
-};
+  export default {
+    name: 'beerList',
+    computed: { 
+      //...mapGetters(['beers']);
+      ...mapGetters({beersAllYeah: 'beers'})
+    }
+  }
+  
 </script>
