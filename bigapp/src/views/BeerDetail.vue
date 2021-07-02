@@ -19,9 +19,7 @@
       //...mapGetters(['beers']);
       ...mapGetters({beerDetail: 'beer'}),
       getBeer() {
-          console.log(this.beerDetail(this.$route.params.id))
-          console.log(this.$route.params.id)
-          return this.beerDetail(this.$route.params.id)
+          return this.beerDetail(parseInt(this.$route.params.id))
       }
     },
     // data: () => {return{beer: null} }

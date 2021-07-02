@@ -27,13 +27,11 @@ export default new Vuex.Store({
       return state.beers;
     },
     beer(state) {
-      console.log(state.beers) 
       return (id => {
-        console.log(id) 
         return state.beers.find(beer => {
-        return beer.id === id
-      }
-    )}
-   )}
+          return beer.id === id
+        })
+      })
+    }
   },
 });
